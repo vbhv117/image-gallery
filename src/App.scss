@@ -1,0 +1,34 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+.app {
+  padding: $xl 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: $title;
+  color: $text-green;
+  margin-bottom: 70px;
+
+  @include mobile {
+    font-size: $l;
+    margin-bottom: 40px;
+  }
+}
+
+.section-gap {
+  height: 350px;
+  @include mobile {
+    height: 195px;
+  }
+}
+

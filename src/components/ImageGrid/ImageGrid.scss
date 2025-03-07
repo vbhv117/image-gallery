@@ -1,0 +1,87 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.image-grid {
+  @include grid(3);
+  
+  @include tablet {
+    @include grid(2);
+  }
+  
+  @include mobile {
+    @include grid(1);
+    gap: 40px
+  }
+  gap: 60px 52px;
+  
+  &__item {
+    margin-bottom: $lg;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &__card {
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 17px 12px 60px 0px $box-shadow;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  &__image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+  
+  &__description {
+    padding: $xl $lg;
+    font-size: $md;
+    line-height: 26px;
+    color: $text-green;
+    background-color: #fff;
+    min-height: 3rem; 
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    position: relative;
+  }
+  
+  
+  &__title {
+    padding: $lg;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: $text-green;
+    background-color: #f8f8f8;
+    order: 2;
+
+    @include mobile {
+        padding: $l;
+      }
+  }
+}

@@ -1,0 +1,33 @@
+@import './variables';
+@import './mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Martel+Sans:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', 'Martel Sans', sans-serif;
+  background-color: $white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 150px auto 0;
+
+  padding: 0 $md;
+  
+  @include mobile {
+    padding: 0 $l;
+    margin-top: 78px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
